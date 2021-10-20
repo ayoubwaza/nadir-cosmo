@@ -1,0 +1,95 @@
+.__hero_parent {
+  width: $w;
+  padding: $pad;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url("../../public/david-clode-lmLgrnxIALI-unsplash.jpg");
+  background-position: $c;
+  background-size: $cv;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  max-width: 100%;
+  .__hero_child {
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    text-align: $c;
+    font-family: "Cera Pro", sans-serif;
+    height: 67vh;
+  }
+  h1 {
+    font-size: 100px;
+    margin: 0;
+    color: transparent;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 90%,
+      rgba(255, 255, 255, 0.2)
+    );
+    background-clip: text;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .__hero_btn {
+    button {
+      background: transparent;
+      padding: 7px;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      transition: 400ms ease-out;
+      outline: $n;
+      &:hover {
+        box-shadow: inset 10.89em 0 0 #e1a0b4;
+        cursor: pointer;
+      }
+    }
+  }
+}
+//women section
+.__women_parent {
+  width: $w;
+  height: $w;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  padding: $pad;
+  .__women_child {
+    width: $sw;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    font-family: "Cera Pro";
+    p {
+      line-height: 2;
+    }
+    img {
+      object-fit: $cv;
+    }
+    .__women_btn {
+      color: $rgb;
+      font-weight: $b;
+      position: relative;
+      left: 7px;
+      button {
+        background: transparent;
+        padding: 7px;
+        color: $rgb;
+        font-weight: bold;
+        border: 2px solid $rgb;
+        transition: 400ms ease-out;
+        outline: $n;
+        width: 250px;
+        &:hover {
+          box-shadow: inset 19em 0 0 #d37c7e;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

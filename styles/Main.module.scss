@@ -1,0 +1,15 @@
+$c: center;
+$cl: column;
+$n: none;
+$pad: 20px 0 20px 0;
+$h: 100vh;
+$w: 100%;
+$sw: 80%;
+$rgb: rgb(0, 0, 0);
+$cv: cover;
+$f: flex;
+$b: bold;
+$wh: white;
+$sp:space-around;
+@import "./sub-styles/Home.module.scss";
+@import "./sub-styles/navbar.module";
