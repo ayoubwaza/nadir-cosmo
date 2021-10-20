@@ -22,7 +22,7 @@ function NavBar() {
             <li
               className={router.pathname === "/products" ? styles.linka : null}
             >
-              <Link href="products">
+              <Link href="/products">
                 <a>Our Products</a>
               </Link>
             </li>

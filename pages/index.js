@@ -64,28 +64,48 @@ export default function Home() {
                 consectetur adipisicing elit.
               </p>
               <div>
-              <Image
-                src="/brightness.png"
-                loading="lazy"
-                width="200"
-                height="200"
-                alt=""
-              />
+                <Image
+                  src="/brightness.png"
+                  loading="lazy"
+                  width="200"
+                  height="200"
+                  alt=""
+                />
               </div>
               <div className={styles.__women_btn}>
-                <button>
-                  Discover More...
-                </button>
+                <button>Discover More...</button>
               </div>
             </div>
-            <div>
-              <Image
-                src="/section-2-women.webp"
-                loading="lazy"
-                width="440"
-                height="560"
-                alt=""
-              />
+            <div className={styles.women_section_image}>
+              <div className={styles.one_section_womenImg}>
+                <motion.div className={styles.img_2}>
+                  <Image
+                    src="/sec-2.jpg"
+                    loading="lazy"
+                    width="240"
+                    height="360"
+                    alt=""
+                  />
+                </motion.div>
+                <motion.div className={styles.img_1}>
+                  <Image
+                    src="/sec-4.webp"
+                    loading="lazy"
+                    width="240"
+                    height="360"
+                    alt=""
+                  />
+                </motion.div>
+                <motion.div className={styles.img_4}>
+                  <Image
+                    src="/amazigh.jpg"
+                    loading="lazy"
+                    width="240"
+                    height="360"
+                    alt=""
+                  />
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
