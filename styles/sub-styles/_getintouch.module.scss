@@ -1,0 +1,68 @@
+.parent_beintouch {
+  width: $w;
+  height: $w;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  font-family: $fv;
+  background: linear-gradient(to right,rgba(0, 0, 0, .4), rgba(156, 112, 154,.6)),
+    url("/getintouch_bg.webp");
+    background-position: $c;
+    background-size: $cv;
+  padding: $pad;
+  .beintouch_anima{
+      width: 300px;
+      height: 300px;
+      max-height: 300px;
+  }
+  h1,h2{
+      color: $wh;
+  }
+  h2{
+      margin-top: 0;
+  }
+  .child_getintouch {
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    height: $w;
+    width: $sw;
+    form {
+      width: $w;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      position: relative;
+      input {
+        border-radius: 20px;
+        outline: $n;
+        border: $n;
+        padding: 10px;
+        font-weight: $b;
+      }
+      input[type="text"] {
+        width: 400px;
+        &::placeholder {
+          color: #e1a0b4;
+          font-weight: $b;
+        }
+      }
+      button {
+        background: #9c709a;
+        color: $wh;
+        cursor: pointer;
+        letter-spacing: 2px;
+        border-radius: 20px;
+        outline: $n;
+        border: $n;
+        padding: 10px;
+        font-weight: $b;
+      }
+      .submit_getintouch {
+        position: absolute;
+        right: -10px;
+      }
+    }
+  }
+}

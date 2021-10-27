@@ -1,0 +1,43 @@
+.parent__home_products {
+  width: $w;
+  height: 60vh;
+  text-align: $c;
+  font-family: $fv;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  color: $wh;
+  background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.4)), url('/prod-1.jpg');
+  background-position: $c;
+  background-size: $cv;
+  background-attachment: fixed;
+  h1 {
+    font-weight: $b;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+  .children__home_products {
+    width: 80%;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+  }
+  button {
+    background: transparent;
+    padding: 7px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 400ms ease-out;
+    width: 300px;
+    outline: $n;
+    &:hover {
+      box-shadow: inset 23em 0 0 $rgb;
+      cursor: pointer;
+      color: $wh;
+    }
+  }
+}

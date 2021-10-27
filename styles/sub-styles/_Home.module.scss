@@ -54,7 +54,7 @@
 //women section
 .__women_parent {
   width: $w;
-  height: $w;
+  height: $h;
   display: $f;
   justify-content: $c;
   align-items: $c;
@@ -112,7 +112,7 @@
           position: absolute;
           z-index: 9999;
           top: 120px;
-          left: -75px;
+          left: -65px;
           transition: ease-out transform 400ms;
           &:hover{
             transform: scale(1.1);

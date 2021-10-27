@@ -3,7 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import styles from "../styles/Main.module.scss";
+import React, { useState, useEffect, useRef } from "react";
+import ProductsHome from "../components/productsHome";
+import WhyUs from "../components/why_us";
+import Beintouch from "../components/beInTouch";
 export default function Home() {
+  const [amazighImg, setAmazighImg] = useState(false);
+  const [defaultImg, setDefaultImg] = useState(false);
+  const [makeupImg, setMakeUpImg] = useState(true);
   const variants = {
     init: {
       opacity: 0,
@@ -58,11 +65,31 @@ export default function Home() {
           <div className={styles.__women_child}>
             <div className={styles.__women_content}>
               <h2>Brightness</h2>
-              <p>
-                Lorem ipsum dolor sit amet
-                <br />
-                consectetur adipisicing elit.
-              </p>
+              {defaultImg ? (
+                <p>
+                  Lorem ipsum dolor sit amet {"imag"}
+                  <br />
+                  consectetur adipisicing elit.
+                </p>
+              ) : amazighImg ? (
+                <p>
+                  Lorem ipsum dolor sit amet {"amazighImg"}
+                  <br />
+                  consectetur adipisicing elit.
+                </p>
+              ) : makeupImg ? (
+                <p>
+                  Lorem ipsum dolor sit amet {"makeupImg"}
+                  <br />
+                  consectetur adipisicing elit.
+                </p>
+              ) : (
+                <p>
+                  Lorem ipsum dolor sit amet {"default One"}
+                  <br />
+                  consectetur adipisicing elit.
+                </p>
+              )}
               <div>
                 <Image
                   src="/brightness.png"
@@ -78,7 +105,15 @@ export default function Home() {
             </div>
             <div className={styles.women_section_image}>
               <div className={styles.one_section_womenImg}>
-                <motion.div className={styles.img_2}>
+                <motion.div
+                  className={styles.img_2}
+                  onMouseEnter={() => {
+                    setMakeUpImg(true);
+                  }}
+                  onMouseLeave={() => {
+                    setMakeUpImg(false);
+                  }}
+                >
                   <Image
                     src="/sec-2.jpg"
                     loading="lazy"
@@ -96,7 +131,15 @@ export default function Home() {
                     alt=""
                   />
                 </motion.div>
-                <motion.div className={styles.img_4}>
+                <motion.div
+                  onMouseLeave={() => {
+                    setAmazighImg(false);
+                  }}
+                  onMouseEnter={() => {
+                    setAmazighImg(true);
+                  }}
+                  className={styles.img_4}
+                >
                   <Image
                     src="/amazigh.jpg"
                     loading="lazy"
@@ -110,6 +153,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section id="hold_productshome">
+        <ProductsHome />
+      </section>
+      <section id="getintouch">
+        <Beintouch />
+      </section>
+      {/* <section id="whus">
+        <WhyUs/>
+      </section> */}
     </div>
   );
 }

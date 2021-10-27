@@ -1,0 +1,49 @@
+.parent_why_us {
+  width: $w;
+  height: $w;
+  padding: $pad;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  background: url('/why_us_bg.svg');
+  background-repeat: no-repeat;
+  background-size: $cv;
+  background-position: $c;
+  h1 {
+    font-family: $fv;
+    color: $rgb;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-transform: uppercase;
+    text-align: $c;
+  }
+  .child_why_us {
+    width: $sw;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+  }
+  .whu_us_anima {
+    width: 400px;
+    height: auto;
+  }
+  .options_why_us {
+    ul {
+      li {
+          font-family: $fv,sans-serif;
+        list-style: $n;
+        line-height: 2;
+        font-weight: $b;
+        letter-spacing: 2;
+        span {
+          position: relative;
+          top: 7px;
+          margin-right: 10px;
+          font-size: 25px;
+          color: #9c709a;
+        }
+      }
+    }
+  }
+}
