@@ -12,7 +12,7 @@
 .each_slider{
   background-image: url("/brahch.jpg");
   height:400px;
-  background-position: $c;
-  background-size: contain;
+  background-position: top;
+  background-size: $cv;
   background-repeat: no-repeat;
  }

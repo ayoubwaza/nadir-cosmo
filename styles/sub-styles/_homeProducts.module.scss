@@ -8,7 +8,8 @@
   align-items: $c;
   flex-direction: $cl;
   color: $wh;
-  background:$fvcl;
+  background:url('/nature.jpg');
+  background-attachment: fixed;
   h1 {
     font-weight: $b;
     letter-spacing: 2px;
