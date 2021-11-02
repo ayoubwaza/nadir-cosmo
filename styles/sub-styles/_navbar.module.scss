@@ -54,9 +54,9 @@
           text-transform: uppercase;
           letter-spacing: 2px;
           color: $rgb;
-          transition: 700ms ease-out;
+          transition: 700ms ease-out 300ms;
           &:hover {
-            box-shadow: inset 11em 0 0 -1em $rgb;
+            box-shadow: inset 13em 0 0 -1em $rgb;
             a {
               color: $wh;
             }

@@ -9,6 +9,9 @@
   flex-direction: $cl;
   color: $wh;
   background:url('/nature.jpg');
+  background-repeat: no-repeat;
+  background-position: $c;
+  background-size: $cv;
   background-attachment: fixed;
   h1 {
     font-weight: $b;

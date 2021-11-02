@@ -3,13 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import styles from "../styles/Main.module.scss";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import ProductsHome from "../components/productsHome";
 import Beintouch from "../components/beInTouch";
 import Typewriter from "typewriter-effect";
 import SLiderImg from "../components/sliders_Img";
 import Footer from "../components/footer";
-import Link from 'next/link';
+import Link from "next/link";
+import { InView } from "react-intersection-observer";
 export default function Home() {
   const [amazighImg, setAmazighImg] = useState(false);
   const [defaultImg, setDefaultImg] = useState(false);
@@ -98,92 +99,146 @@ export default function Home() {
       <section id="women">
         <div className={styles.__women_parent}>
           <div className={styles.__women_child}>
-            <div className={styles.__women_content}>
-              <h2>Brightness</h2>
-              {defaultImg ? (
-                <p>
-                  Lorem ipsum dolor sit amet {"imag"}
-                  <br />
-                  consectetur adipisicing elit.
-                </p>
-              ) : amazighImg ? (
-                <p>
-                  Lorem ipsum dolor sit amet {"amazighImg"}
-                  <br />
-                  consectetur adipisicing elit.
-                </p>
-              ) : makeupImg ? (
-                <p>
-                  Lorem ipsum dolor sit amet {"makeupImg"}
-                  <br />
-                  consectetur adipisicing elit.
-                </p>
-              ) : (
-                <p>
-                  Lorem ipsum dolor sit amet {"default One"}
-                  <br />
-                  consectetur adipisicing elit.
-                </p>
+            <InView as="div" threshold={0.4}>
+              {({ inView, ref }) => (
+                <motion.div
+                  ref={ref}
+                  className={styles.__women_content}
+                  initial={
+                    inView
+                      ? null
+                      : {
+                          opacity: 0,
+                          x: -120,
+                        }
+                  }
+                  animate={
+                    inView
+                      ? {
+                          opacity: 1,
+                          x: 0,
+                          transition: {
+                            type: "spring",
+                            stiffness: 10,
+                          },
+                        }
+                      : null
+                  }
+                >
+                  <h2>Brightness</h2>
+                  {defaultImg ? (
+                    <p>
+                      Lorem ipsum dolor sit amet {"imag"}
+                      <br />
+                      consectetur adipisicing elit.
+                    </p>
+                  ) : amazighImg ? (
+                    <p>
+                      Lorem ipsum dolor sit amet {"amazighImg"}
+                      <br />
+                      consectetur adipisicing elit.
+                    </p>
+                  ) : makeupImg ? (
+                    <p>
+                      Lorem ipsum dolor sit amet {"makeupImg"}
+                      <br />
+                      consectetur adipisicing elit.
+                    </p>
+                  ) : (
+                    <p>
+                      Lorem ipsum dolor sit amet {"default One"}
+                      <br />
+                      consectetur adipisicing elit.
+                    </p>
+                  )}
+                  <div>
+                    <Image
+                      src="/brightness.png"
+                      loading="lazy"
+                      width="200"
+                      height="200"
+                      alt=""
+                    />
+                  </div>
+                  <div className={styles.__women_btn}>
+                    <button>Discover More...</button>
+                  </div>
+                </motion.div>
               )}
-              <div>
-                <Image
-                  src="/brightness.png"
-                  loading="lazy"
-                  width="200"
-                  height="200"
-                  alt=""
-                />
-              </div>
-              <div className={styles.__women_btn}>
-                <button>Discover More...</button>
-              </div>
-            </div>
+            </InView>
             <div className={styles.women_section_image}>
-              <div className={styles.one_section_womenImg}>
-                <motion.div
-                  className={styles.img_2}
-                  onMouseEnter={() => {
-                    setMakeUpImg(true);
-                  }}
-                  onMouseLeave={() => {
-                    setMakeUpImg(false);
-                  }}
-                >
-                  <Image
-                    src="/sec-2.jpg"
-                    loading="lazy"
-                    width="240"
-                    height="360"
-                    alt=""
-                  />
-                </motion.div>
-                <motion.div className={styles.img_1}>
-                  <Image
-                    src="/sec-4.webp"
-                    loading="lazy"
-                    width="240"
-                    height="360"
-                    alt=""
-                  />
-                </motion.div>
-                <motion.div
-                  onMouseLeave={() => {
-                    setAmazighImg(false);
-                  }}
-                  onMouseEnter={() => {
-                    setAmazighImg(true);
-                  }}
-                  className={styles.img_4}
-                >
-                  <Image
-                    src="/amazigh.jpg"
-                    loading="lazy"
-                    width="240"
-                    height="360"
-                    alt=""
-                  />
-                </motion.div>
-              </div>
+              <InView as="div" threshold={0.4}>
+                {({ inView, ref }) => (
+                  <motion.div
+                    ref={ref}
+                    className={styles.one_section_womenImg}
+                    initial={
+                      inView
+                        ? null
+                        : {
+                            opacity: 0,
+                            y: 20,
+                          }
+                    }
+                    animate={
+                      inView
+                        ? {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                              type: "spring",
+                              stiffness: 10,
+                            },
+                          }
+                        : null
+                    }
+                  >
+                    <motion.div
+                      className={styles.img_2}
+                      onMouseEnter={() => {
+                        setMakeUpImg(true);
+                      }}
+                      onMouseLeave={() => {
+                        setMakeUpImg(false);
+                      }}
+                    >
+                      <Image
+                        src="/sec-2.jpg"
+                        loading="lazy"
+                        width="240"
+                        height="360"
+                        alt=""
+                      />
+                    </motion.div>
+                    <motion.div className={styles.img_1}>
+                      <Image
+                        src="/sec-4.webp"
+                        loading="lazy"
+                        width="240"
+                        height="360"
+                        alt=""
+                      />
+                    </motion.div>
+                    <motion.div
+                      onMouseLeave={() => {
+                        setAmazighImg(false);
+                      }}
+                      onMouseEnter={() => {
+                        setAmazighImg(true);
+                      }}
+                      className={styles.img_4}
+                    >
+                      <Image
+                        src="/amazigh.jpg"
+                        loading="lazy"
+                        width="240"
+                        height="360"
+                        alt=""
+                      />
+                    </motion.div>
+                  </motion.div>
+                )}
+              </InView>
             </div>
           </div>
         </div>

@@ -23,7 +23,6 @@ export default function SLiderImg() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        aut
         className="mySwiper"
       >
         <SwiperSlide>
