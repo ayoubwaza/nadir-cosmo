@@ -22,6 +22,7 @@ function Beintouch(props) {
   return (
     <div>
       <div className={styles.parent_beintouch}>
+        <h3>GET IN TOUCH</h3>
         <div ref={beintoucref} className={styles.beintouch_anima}></div>
         <h1>Sign Up To Get Notified For New Products</h1>
         <h2>No Spam, We Promise</h2>

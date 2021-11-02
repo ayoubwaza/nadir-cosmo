@@ -5,8 +5,11 @@ import NavBar from "../components/navbar";
 import styles from "../styles/Main.module.scss";
 import React, { useState, useEffect, useRef } from "react";
 import ProductsHome from "../components/productsHome";
-import WhyUs from "../components/why_us";
 import Beintouch from "../components/beInTouch";
+import Typewriter from "typewriter-effect";
+import SLiderImg from "../components/sliders_Img";
+import Footer from "../components/footer";
+import Link from 'next/link';
 export default function Home() {
   const [amazighImg, setAmazighImg] = useState(false);
   const [defaultImg, setDefaultImg] = useState(false);
@@ -25,7 +28,7 @@ export default function Home() {
   const TitleItems = {
     init: {
       opacity: 0,
-      y: 60,
+      y: 55,
     },
     anim: {
       opacity: 1,
@@ -52,11 +55,43 @@ export default function Home() {
           initial="init"
           animate="anim"
         >
-          <motion.h1 variants={TitleItems}>We Don't Sell Cosmetics,</motion.h1>
-          <motion.h1 variants={TitleItems}>We Sell Hope</motion.h1>
+          <motion.h1 variants={TitleItems}>
+            We Don't Sell <span className="__Trash">Trash</span>,
+          </motion.h1>
+          <motion.h1 variants={TitleItems}>
+            We Sell
+            <Typewriter
+              options={{
+                delay: 66,
+                autoStart: true,
+                loop: true,
+              }}
+              onInit={(typewriter) => {
+                typewriter.typeString("Hope!").pauseFor(2500).deleteAll();
+                typewriter.typeString("Beauty!").pauseFor(2500).deleteAll();
+                typewriter
+                  .typeString("Quality!")
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start();
+              }}
+            />
+          </motion.h1>
           <br />
           <motion.div className={styles.__hero_btn} variants={TitleItems}>
-            <button>VISIT OUR STORE</button>
+            <div className={styles.image_widthbtn}>
+              <Image
+                src="/brightness - 3.png"
+                width="100px"
+                height="100px"
+                alt=""
+              />
+            </div>
+            <Link href="/products">
+              <a className="links_arr">
+                <button>VISIT OUR STORE</button>
+              </a>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
@@ -159,9 +194,12 @@ export default function Home() {
       <section id="getintouch">
         <Beintouch />
       </section>
-      {/* <section id="whus">
-        <WhyUs/>
-      </section> */}
+      <div id="sliders">
+        <SLiderImg />
+      </div>
+      <section id="footer">
+        <Footer />
+      </section>
     </div>
   );
 }

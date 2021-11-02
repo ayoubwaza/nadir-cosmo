@@ -1,0 +1,26 @@
+.footer__parent {
+  @include Column();
+  width: $w;
+  .handle_footer_social_Media {
+    width: $w;
+    background: rgb(26, 24, 24);
+    @include Column();
+    padding: 15px 0 10px 0;
+    .social_media_footer {
+      display: $f;
+      justify-content: $sv;
+      align-items: $c;
+      width: 40%;
+      img {
+        object-fit: $cv;
+        border-radius: 100%;
+      }
+    }
+  }
+  .footer__child {
+    background: $rgb;
+    width: $w;
+    height: $w;
+    font-family: $fv,sans-serif;
+  }
+}

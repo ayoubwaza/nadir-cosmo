@@ -12,10 +12,25 @@ $b: bold;
 $wh: white;
 $sp: space-around;
 $fv: "Cera Pro";
-$fvc: #e1a0b4;
-$agg: #9c709a;
+$fvc: #FFA500;
+$standar:#F6E6F4;
+$sv: space-evenly;
+$fvcl:#00aeef;
+@mixin FlexThem {
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+}
+@mixin Column {
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+}
 @import "./sub-styles/Home.module.scss";
 @import "./sub-styles/navbar.module";
 @import "./sub-styles/homeProducts.module";
 @import "./sub-styles/whyus.module";
 @import "./sub-styles/getintouch.module";
+@import "./sub-styles/sliders.module";
+@import "./sub-styles/footer.module";

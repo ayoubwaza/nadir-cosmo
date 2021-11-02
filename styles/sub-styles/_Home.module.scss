@@ -1,8 +1,7 @@
 .__hero_parent {
   width: $w;
   padding: $pad;
-  background: linear-gradient(145deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-    url("/bg__hero.webp");
+  background: linear-gradient(to right ,$fvc 16%, $fvcl 16%);
   background-position: $c;
   background-size: $cv;
   background-repeat: no-repeat;
@@ -20,6 +19,7 @@
     text-align: $c;
     font-family: "Cera Pro", sans-serif;
     height: 67vh;
+    position: relative;
   }
   h1 {
     font-size: 100px;
@@ -33,10 +33,27 @@
     background-clip: text;
     margin-bottom: 10px;
     font-weight: 600;
+    position: relative;
+    left: 67px;
   }
   .__hero_btn {
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    position: absolute;
+    left: -18%;
+    bottom: 150px;
+    .image_widthbtn{
+      position: relative;
+      top: 40px;
+      left: -4px;
+    }
+    img{
+      object-fit: contain;
+    }
     button {
-      background: transparent;
+      background: $fvc;
       padding: 7px;
       color: white;
       font-weight: bold;
@@ -54,12 +71,12 @@
 //women section
 .__women_parent {
   width: $w;
-  height: $h;
   display: $f;
   justify-content: $c;
   align-items: $c;
   flex-direction: $cl;
   padding: $pad;
+  height: 560px;
   .__women_child {
     width: $sw;
     display: $f;

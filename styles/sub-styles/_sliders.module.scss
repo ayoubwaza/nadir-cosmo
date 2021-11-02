@@ -1,0 +1,18 @@
+.parent__slider {
+  width: $w;
+  background: $fvcl;
+  .child__slider {
+    width: $w;
+    img {
+      object-fit: $cv;
+    }
+  }
+  
+}
+.each_slider{
+  background-image: url("/brahch.jpg");
+  height:400px;
+  background-position: $c;
+  background-size: contain;
+  background-repeat: no-repeat;
+ }

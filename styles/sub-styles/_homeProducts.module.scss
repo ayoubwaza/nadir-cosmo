@@ -8,10 +8,7 @@
   align-items: $c;
   flex-direction: $cl;
   color: $wh;
-  background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.4)), url('/prod-1.jpg');
-  background-position: $c;
-  background-size: $cv;
-  background-attachment: fixed;
+  background:$fvcl;
   h1 {
     font-weight: $b;
     letter-spacing: 2px;
@@ -26,7 +23,7 @@
     flex-direction: $cl;
   }
   button {
-    background: transparent;
+    background: $fvc;
     padding: 7px;
     color: white;
     font-weight: bold;

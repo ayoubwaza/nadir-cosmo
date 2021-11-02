@@ -1,11 +1,34 @@
 .__nav_parent {
   width: $w;
-  display: $f;
-  justify-content: $c;
-  align-items: $c;
+  @include Column();
   font-family: "Cera Pro", sans-serif;
+  .cart_with_logo{
+    width:92%;
+    display: $f;
+    justify-content: space-between;
+    align-items: $c;
+    .map_heart{
+      display: $f;
+      justify-content: $sp;
+      align-items: $c;
+      .cart{
+        margin-right: 40px;
+      }
+      span{
+        font-size: 30px;
+      }
+    }
+  }
+  .nav__logo {
+    background-image: url("/lineThrough.png");
+    background-size: $cv;
+    background-repeat: no-repeat;
+    img{
+      object-fit: contain;
+    }
+  }
   .__nav_child {
-    width: $sw;
+    width: $w;
     display: $f;
     justify-content: $c;
     align-items: $c;
@@ -18,12 +41,12 @@
     nav {
       width: $w;
       display: $f;
-      justify-content: $c;
+      justify-content: $sp;
       align-items: $c;
       ul {
         width: $sw;
         display: $f;
-        justify-content: space-around;
+        justify-content: $sv;
         align-items: $c;
         li {
           list-style: $n;
@@ -34,7 +57,7 @@
           transition: 700ms ease-out;
           &:hover {
             box-shadow: inset 11em 0 0 -1em $rgb;
-            a{
+            a {
               color: $wh;
             }
           }
@@ -47,7 +70,24 @@
     }
   }
 }
-.linka{
+.linka {
   border: 2px solid $rgb;
   padding: 7px;
+}
+.nav_mobile {
+  display: $n;
+}
+@media only screen and (max-width: 600px) {
+  .__nav_parent {
+    .__nav_child {
+      nav {
+        ul {
+          display: $n;
+        }
+      }
+    }
+  }
+  .nav_mobile {
+    display: block;
+  }
 }

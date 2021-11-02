@@ -6,21 +6,21 @@
   align-items: $c;
   flex-direction: $cl;
   font-family: $fv;
-  background: linear-gradient(to right,rgba(0, 0, 0, .4), rgba(156, 112, 154,.6)),
-    url("/getintouch_bg.webp");
-    background-position: $c;
-    background-size: $cv;
+  background-position: $c;
+  background-size: $cv;
   padding: $pad;
-  .beintouch_anima{
-      width: 300px;
-      height: 300px;
-      max-height: 300px;
+  color: $rgb;
+  .beintouch_anima {
+    width: 300px;
+    height: 300px;
+    max-height: 300px;
   }
-  h1,h2{
-      color: $wh;
+  h1,
+  h2 {
+    color: $rgb;
   }
-  h2{
-      margin-top: 0;
+  h2 {
+    margin-top: 0;
   }
   .child_getintouch {
     display: $f;
@@ -37,27 +37,25 @@
       input {
         border-radius: 20px;
         outline: $n;
-        border: $n;
+        border: 2px solid $rgb;
         padding: 10px;
         font-weight: $b;
-      }
-      input[type="text"] {
-        width: 400px;
+        width: 450px;
         &::placeholder {
-          color: #e1a0b4;
+          color: $fvc;
           font-weight: $b;
         }
       }
       button {
-        background: #9c709a;
+        background: $fvc;
         color: $wh;
         cursor: pointer;
         letter-spacing: 2px;
-        border-radius: 20px;
         outline: $n;
-        border: $n;
         padding: 10px;
         font-weight: $b;
+        border: 2px solid $rgb;
+        width: 150px;
       }
       .submit_getintouch {
         position: absolute;

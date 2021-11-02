@@ -10,7 +10,7 @@ function ProductsHome() {
         </div>
         <div>
           <Link href="/products">
-            <a>
+            <a className="links_arr">
               <button>Discover More</button>
             </a>
           </Link>
