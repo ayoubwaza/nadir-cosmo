@@ -1,30 +1,78 @@
 .parent__home_products {
   width: $w;
-  height: 60vh;
+  height: 100%;
   text-align: $c;
   font-family: $fv;
   display: $f;
   justify-content: $c;
   align-items: $c;
   flex-direction: $cl;
-  color: $wh;
-  background:url('/nature.jpg');
-  background-repeat: no-repeat;
-  background-position: $c;
-  background-size: $cv;
-  background-attachment: fixed;
+  color: $rgb;
   h1 {
     font-weight: $b;
     letter-spacing: 2px;
     line-height: 2;
     text-transform: uppercase;
+    margin: 0%;
   }
   .children__home_products {
-    width: 80%;
+    width: $w;
     display: $f;
     justify-content: $c;
     align-items: $c;
     flex-direction: $cl;
+    .__home__product_first_three {
+      width: $w;
+      display: $f;
+      justify-content: space-around;
+      align-items: $c;
+      padding: 20px;
+      .child_each_fThree_prod {
+        @include Column();
+        width: 408px;
+        height: 408px;
+        background-position: $c;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: $wh;
+        position: relative;
+        .handle_content_pro_each {
+          width: $w;
+          position: absolute;
+          bottom: 40px;
+          display: $f;
+          justify-content:$sp;
+          align-items: $c;
+          cursor: pointer;
+          span{
+            font-size: 30px;
+            position: relative;
+            top: 4px;
+          }
+          h3 {
+            letter-spacing: 2px;
+            transition: transform 400ms ease-out;
+            &:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+          }
+        }
+       
+      }
+      .e_same {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+          url("/bracelet.jpg");
+      }
+      .e_sameTwo {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+          url("/watch.jpg");
+      }
+      .e_sameThree {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+          url("/lipstick.jpg");
+      }
+    }
   }
   button {
     background: $fvc;

@@ -68,12 +68,12 @@ function Footer() {
           </div>
         </div>
         <div className={styles.each_ftr}>
-          <h3>About Brightness</h3>
+          <h3>Quick Links</h3>
           <div>
             <ul>
-              <li>Why Us?</li>
-              <li>FAQS</li>
-              <li>Refer A Friend</li>
+              <li>Home</li>
+              <li>Female Products</li>
+              <li>Male Products</li>
             </ul>
           </div>
         </div>
@@ -90,9 +90,7 @@ function Footer() {
       </div>
       <hr></hr>
       <div>
-        <p>
-          WBrightness™ is a registered trademark © 2021 All rights reserved
-        </p>
+        <p>WBrightness™ is a registered trademark © 2021 All rights reserved</p>
       </div>
     </div>
   );

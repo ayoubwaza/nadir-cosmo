@@ -1,50 +1,52 @@
 import React from "react";
 import styles from "../styles/Main.module.scss";
 import Link from "next/link";
-import { InView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { AiOutlineArrowRight } from "react-icons/ai";
 function ProductsHome() {
   return (
     <div className={styles.parent__home_products}>
-      <InView as="div">
-        {({ inView, ref }) => (
-          <motion.div
-            ref={ref}
-            className={styles.children__home_products}
-            initial={
-              inView
-                ? null
-                : {
-                    opacity: 0,
-                    y: 20,
-                  }
-            }
-            animate={
-              inView
-                ? {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      type: "spring",
-                      stiffness: 10,
-                    },
-                  }
-                : null
-            }
+      <div className={styles.children__home_products}>
+        <div>
+          <h1>Natural Products Only For You</h1>
+        </div>
+        <div className={styles.__home__product_first_three}>
+          <div className={`${styles.child_each_fThree_prod} ${styles.e_same}`}>
+            <div className={styles.handle_content_pro_each}>
+              <span>
+                <AiOutlineArrowRight />
+              </span>
+              <h3>Bracelet</h3>
+            </div>
+          </div>
+          <div
+            className={`${styles.child_each_fThree_prod} ${styles.e_sameTwo}`}
           >
-            <div>
-              <h1>Natural Products Only For You</h1>
+            <div className={styles.handle_content_pro_each}>
+              <span>
+                <AiOutlineArrowRight />
+              </span>
+              <h3>Bracelet</h3>
             </div>
-            <div>
-              <Link href="/products">
-                <a className="links_arr">
-                  <button>Discover More</button>
-                </a>
-              </Link>
+          </div>
+          <div
+            className={`${styles.child_each_fThree_prod} ${styles.e_sameThree}`}
+          >
+            <div className={styles.handle_content_pro_each}>
+              <span>
+                <AiOutlineArrowRight />
+              </span>
+              <h3>Bracelet</h3>
             </div>
-          </motion.div>
-        )}
-      </InView>
+          </div>
+        </div>
+        <div>
+          <Link href="/products">
+            <a className="links_arr">
+              <button> Discover More</button>
+            </a>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
