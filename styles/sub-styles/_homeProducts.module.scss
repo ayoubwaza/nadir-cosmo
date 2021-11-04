@@ -41,21 +41,26 @@
           position: absolute;
           bottom: 40px;
           display: $f;
-          justify-content:$sp;
+          justify-content:$sv;
           align-items: $c;
           cursor: pointer;
+          &:hover h3 {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+          &:hover span{
+            transform: scale(1.1);
+            cursor: pointer;
+          }
           span{
             font-size: 30px;
             position: relative;
             top: 4px;
+            transition: transform 400ms ease-out;
           }
           h3 {
             letter-spacing: 2px;
             transition: transform 400ms ease-out;
-            &:hover {
-              transform: scale(1.1);
-              cursor: pointer;
-            }
           }
         }
        

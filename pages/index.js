@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import styles from "../styles/Main.module.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductsHome from "../components/productsHome";
 import Beintouch from "../components/beInTouch";
 import Typewriter from "typewriter-effect";

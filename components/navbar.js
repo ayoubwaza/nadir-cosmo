@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import navMobile from "../public/Animations/controleNavbar.json";
 import Lottie from "lottie-web";
-import { FaCartPlus, FaHeart } from "react-icons/fa";
+import { FaCartPlus, FaHeart, FaSearch } from "react-icons/fa";
 function NavBar() {
   const anima_navbar = useRef(null);
   const [controleLottieMenu, setControleLottieMenu] = useState(false);
@@ -49,6 +49,11 @@ function NavBar() {
           <Image src="/brightness - 3.png" width="200" height="80" alt="" />
         </div>
         <div className={styles.map_heart}>
+        <div>
+            <span >
+              <FaSearch />
+            </span>
+          </div>
           <div>
             <span className={styles.cart}>
               <FaCartPlus />
@@ -62,7 +67,7 @@ function NavBar() {
         </div>
       </div>
       <div className={styles.__nav_child}>
-        <nav>
+        <nav className="target">
           <ul>
             <li className={router.pathname === "/" ? styles.linka : null}>
               <Link href="/">

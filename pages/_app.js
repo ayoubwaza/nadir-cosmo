@@ -5,21 +5,14 @@ import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/effect-fade/effect-fade.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import React, { useEffect, useRef } from "react";
+import { FaArrowUp } from "react-icons/fa";
+import { animateScroll, Link } from "react-scroll";
 function MyApp({ Component, pageProps }) {
   const ref_cursur = useRef(null);
-  useEffect(() => {
+  const ref_sidetotop = useRef(null);
+  //links while hovering on'em
+  const LinksMouseEffect = () => {
     var links = document.querySelectorAll(".links_arr");
-    const trashHome = document.getElementsByClassName("__Trash")[0];
-    if(trashHome){
-      trashHome.addEventListener("mouseenter", () => {
-        ref_cursur.current.style.transform = "scale(4)";
-      });
-      trashHome.addEventListener("mouseleave", () => {
-        ref_cursur.current.style.transform = "scale(1)";
-      });
-    }else{
-      return null;
-    }
     links.forEach((el) => {
       el.addEventListener("mouseenter", () => {
         ref_cursur.current.style.transform = "scale(4)";
@@ -36,10 +29,65 @@ function MyApp({ Component, pageProps }) {
       ref_cursur.current.style.left = `${x}px`;
       ref_cursur.current.style.top = `${y}px`;
     });
+  };
+  //home page styling trash
+  const TrashHomeWord = () => {
+    const trashHome = document.getElementsByClassName("__Trash")[0];
+    if (trashHome) {
+      trashHome.addEventListener("mouseenter", () => {
+        ref_cursur.current.style.transform = "scale(4)";
+      });
+      trashHome.addEventListener("mouseleave", () => {
+        ref_cursur.current.style.transform = "scale(1)";
+      });
+    } else {
+      return null;
+    }
+  };
+  //aside button to top
+  const asideButtonToTop = () => {
+    const aside_top = document.getElementsByClassName("aside_top")[0];
+
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 900) {
+        aside_top.style.display = "flex";
+      } else {
+        aside_top.style.display = "none";
+      }
+    });
+    aside_top.addEventListener("mouseenter", () => {
+      ref_cursur.current.style.transform = "scale(4)";
+    });
+    aside_top.addEventListener("mouseleave", () => {
+      ref_cursur.current.style.transform = "scale(1)";
+    });
+  };
+  useEffect(() => {
+    asideButtonToTop();
+    TrashHomeWord();
+    LinksMouseEffect();
   });
   return (
     <div>
       <div ref={ref_cursur} className="cursura"></div>
+      <div
+        onClick={() => {
+          animateScroll.scrollToTop({
+            spy: true,
+            smooth: true,
+            hashSpy: true,
+            offset: 50,
+            duration: 500,
+          });
+        }}
+        ref={ref_sidetotop}
+        className="aside_top"
+      >
+        <span>
+          <FaArrowUp />
+        </span>
+      </div>
+
       <Component {...pageProps} />
     </div>
   );
