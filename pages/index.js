@@ -11,6 +11,7 @@ import SLiderImg from "../components/sliders_Img";
 import Footer from "../components/footer";
 import Link from "next/link";
 import { InView } from "react-intersection-observer";
+import MarqueeSider from "../components/MarqueeSider";
 export default function Home() {
   const [amazighImg, setAmazighImg] = useState(false);
   const [defaultImg, setDefaultImg] = useState(false);
@@ -246,12 +247,15 @@ export default function Home() {
       <section id="hold_productshome">
         <ProductsHome />
       </section>
-      <section id="getintouch">
-        <Beintouch />
-      </section>
       <div id="sliders">
         <SLiderImg />
       </div>
+      <section id="marquee-slider">
+        <MarqueeSider />
+      </section>
+      <section id="getintouch">
+        <Beintouch />
+      </section>
       <section id="footer">
         <Footer />
       </section>

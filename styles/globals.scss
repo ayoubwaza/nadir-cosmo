@@ -4,6 +4,7 @@ body {
   margin: 0;
   width: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -67,7 +68,7 @@ a {
   bottom: 16px;
   z-index: 99;
   transition: 400ms ease-out 300ms;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   &:hover {

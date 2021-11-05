@@ -7,12 +7,33 @@
       object-fit: $cv;
     }
   }
-  
 }
-.each_slider{
+.each_slider {
   background-image: url("/brahch.jpg");
-  height:400px;
+  height: 400px;
   background-position: top;
   background-size: $cv;
   background-repeat: no-repeat;
- }
+}
+//styling marquee slider section
+.marqueeSliders__parent{
+  width: $w;
+  height: 80vh;
+  .marquee_reviews{
+    width: 310px;
+    height: 100%;
+    display: $f;
+    justify-content: $sv;
+    align-items: $c;
+    background: $fvcl;
+    padding: 3px 3px 3px 7px;
+    h4,p{
+      font-family: $fv;
+      margin: 3px 0 0 20px;
+    }
+    img{
+      object-fit: $cv;
+      border-radius: 100%;
+    }
+  }
+}

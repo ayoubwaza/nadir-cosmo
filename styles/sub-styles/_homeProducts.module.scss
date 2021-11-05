@@ -7,6 +7,7 @@
   justify-content: $c;
   align-items: $c;
   flex-direction: $cl;
+  padding: $pad;
   color: $rgb;
   h1 {
     font-weight: $b;
@@ -41,18 +42,18 @@
           position: absolute;
           bottom: 40px;
           display: $f;
-          justify-content:$sv;
+          justify-content: $sv;
           align-items: $c;
           cursor: pointer;
           &:hover h3 {
             transform: scale(1.1);
             cursor: pointer;
           }
-          &:hover span{
+          &:hover span {
             transform: scale(1.1);
             cursor: pointer;
           }
-          span{
+          span {
             font-size: 30px;
             position: relative;
             top: 4px;
@@ -63,35 +64,45 @@
             transition: transform 400ms ease-out;
           }
         }
-       
       }
       .e_same {
         background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
           url("/bracelet.jpg");
+          background-position: $c;
+          background-size: $cv;
+          background-repeat: no-repeat;
       }
       .e_sameTwo {
         background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
           url("/watch.jpg");
+          background-position: $c;
+          background-size: $cv;
+          background-repeat: no-repeat;
       }
       .e_sameThree {
         background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
           url("/lipstick.jpg");
       }
-    }
-  }
-  button {
-    background: $fvc;
-    padding: 7px;
-    color: white;
-    font-weight: bold;
-    border: 2px solid white;
-    transition: 400ms ease-out;
-    width: 300px;
-    outline: $n;
-    &:hover {
-      box-shadow: inset 23em 0 0 $rgb;
-      cursor: pointer;
-      color: $wh;
+      .e_sameFour {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+          url("/shoes.jpg");
+          background-size: $cv;
+          background-repeat: no-repeat;
+      }
+      .e_sameFive {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+          url("/ring.jpg");
+          background-position: $c;
+          background-size: $cv;
+          background-repeat: no-repeat;
+      }
+      .e_sameSex {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+          url("/robes.jpg");
+          background-position: $c;
+          background-size: $cv;
+          background-repeat: no-repeat;
+      }
     }
   }
 }
