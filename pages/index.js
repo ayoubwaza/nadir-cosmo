@@ -109,7 +109,7 @@ export default function Home() {
                     inView
                       ? null
                       : {
-                          opacity: 0,
+                          opacity: 0.7,
                           x: -120,
                         }
                   }

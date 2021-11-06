@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
     const aside_top = document.getElementsByClassName("aside_top")[0];
 
     document.addEventListener("scroll", () => {
-      if (window.scrollY > 900) {
+      if (window.scrollY >500) {
         aside_top.style.display = "flex";
       } else {
         aside_top.style.display = "none";
