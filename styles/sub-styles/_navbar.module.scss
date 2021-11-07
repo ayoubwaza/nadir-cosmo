@@ -56,6 +56,7 @@
           letter-spacing: 2px;
           color: $rgb;
           transition: 700ms ease-out 300ms;
+          font-family: "K2D", sans-serif;
           &:hover {
             box-shadow: inset 13em 0 0 -1em $rgb;
             a {
@@ -94,7 +95,7 @@
 }
 //styles searchBar cuz its a part of our navbar even if its component seperated......thanks for understanding
 .searchbar_parent {
-  width: $sw;
+  width: $w;
   color: $wh;
   background: rgba(0, 0, 0, 0.9);
   width: 100%;
@@ -105,11 +106,11 @@
   z-index: 99;
   display: $f;
   justify-content: $c;
-  .FaPowerOff{
+  .FaPowerOff {
     display: $f;
     justify-content: $c;
     padding: $pad;
-    span{
+    span {
       font-size: 30px;
       color: orange;
       cursor: pointer;
@@ -125,7 +126,7 @@
     );
     background-clip: text;
     margin: 0;
-    font-family: $fv;
+    font-family: "K2D", sans-serif;
   }
   form {
     display: $f;
@@ -145,7 +146,7 @@
         border: $n;
         margin: 0;
         font-weight: $b;
-        &::placeholder{
+        &::placeholder {
           color: $fvcl;
         }
       }

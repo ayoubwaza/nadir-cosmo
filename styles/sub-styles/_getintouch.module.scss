@@ -17,9 +17,8 @@
   h1,
   h2 {
     color: $wh;
-  }
-  h2 {
-    margin-top: 0;
+    font-family: "K2D", sans-serif;
+    text-align: $c;
   }
   .child_getintouch {
     display: $f;
@@ -63,6 +62,6 @@
     }
   }
 }
-.child__get_g{
+.child__get_g {
   @include Column();
 }

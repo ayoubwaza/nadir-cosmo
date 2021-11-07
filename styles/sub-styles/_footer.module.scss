@@ -22,27 +22,31 @@
     padding: $pad;
     width: $sw;
     height: $w;
-    font-family: $fv,sans-serif;
     color: $wh;
     display: $f;
     justify-content: $sp;
     align-items: $c;
-    ul{
+    h3 {
+      font-family: "K2D", sans-serif;
+    }
+    ul {
       text-align: left;
       margin: 0%;
       padding: 0%;
-      li{
+      font-family: $fv;
+      li {
         list-style: $n;
         text-align: left;
         margin-bottom: 10px;
       }
     }
   }
-  hr{
+  hr {
     width: 80%;
   }
-  p{
+  p {
     font-weight: $b;
     color: $wh;
+    font-family: $fv;
   }
 }

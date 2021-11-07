@@ -4,9 +4,12 @@ import styled from "styled-components";
 import times from "lodash/times";
 import { withSize } from "react-sizeme";
 import { nanoid } from "nanoid";
-import Image from 'next/image'
+import Image from "next/image";
 import FullWidth from "../components/FullWidth";
 
+const MarquedHeader = styled.h2`
+  font-family: "K2D", sans-serif;
+`;
 const Height = styled.div`
   position: relative;
   width: 100%;
@@ -15,7 +18,6 @@ const Height = styled.div`
 
 const Box = styled.div`
   padding: ${(props) => props.scale * 25}px;
-  font-family:"Cera Pro",sans-serif;
 `;
 
 const Review = styled.div`
@@ -37,7 +39,7 @@ const Avatar = styled.div`
   margin-right: ${(props) => props.scale * 15}px;
   img {
     max-width: 100%;
-    object-fit:cover
+    object-fit: cover;
   }
 `;
 
@@ -46,23 +48,23 @@ const Content = styled.div`
     width: ${(props) => props.scale * 250}px;
     margin: 0;
     color: #444;
-    font-family: Helvetica, sans-serif;
     font-size: ${(props) => props.scale * 14}px;
     line-height: ${(props) => props.scale * 20}px;
     font-weight: 100;
     text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-weight:bold;
   }
-  h2{
+  h2 {
     width: ${(props) => props.scale * 250}px;
     margin: 0;
     color: #444;
-    font-family: Helvetica, sans-serif;
     font-size: ${(props) => props.scale * 14}px;
     line-height: ${(props) => props.scale * 20}px;
     font-weight: 100;
     text-align: left;
-    font-weight:bold;
-    text-transform:uppercase;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 `;
 
@@ -81,11 +83,11 @@ const productContent = [
   "dolor sit amet consectetur, adipisicing elit.",
 ];
 const Headers = [
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
+  "Lorem Ipsum",
+  "Lorem Ipsum",
+  "Lorem Ipsum",
+  "Lorem Ipsum",
+  "Lorem Ipsum",
 ];
 
 const Reviews = ({ size, onStartPerformance, onEndPerformance }) => {
@@ -127,7 +129,7 @@ const Reviews = ({ size, onStartPerformance, onEndPerformance }) => {
                   <Image width="100" height="100" src={portraits[id]} alt="" />
                 </Avatar>
                 <Content scale={scale}>
-                  <h2>{Headers[id]}</h2>
+                  <MarquedHeader>{Headers[id]}</MarquedHeader>
                   <p>
                     {productContent[id]} {id}
                   </p>

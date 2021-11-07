@@ -11,7 +11,7 @@ function Women() {
     <div className={styles.__women_parent}>
       <div className={styles.__women_child}>
         <InView as="div" threshold={0.4}>
-          {({ inView, ref,entry }) => (
+          {({ inView, ref, entry }) => (
             <motion.div
               ref={ref}
               className={styles.__women_content}
@@ -36,41 +36,57 @@ function Women() {
                   : null
               }
             >
-              <h2>Brightness</h2>
+              <div className={styles.women_logo}>
+                <Image
+                  src="/brightness-3.png"
+                  loading="lazy"
+                  width="200"
+                  height="100"
+                  alt=""
+                />
+              </div>
               {defaultImg ? (
                 <p>
                   Lorem ipsum dolor sit amet {"imag"}
                   <br />
                   consectetur adipisicing elit.
+                  <br />
+                  possimus cumque eum sapiente quibusdam!
+                  <br />
+                  voluptates consectetur eveniet velit.
                 </p>
               ) : amazighImg ? (
                 <p>
                   Lorem ipsum dolor sit amet {"amazighImg"}
                   <br />
                   consectetur adipisicing elit.
+                  <br />
+                  possimus cumque eum sapiente quibusdam!
+                  <br />
+                  voluptates consectetur eveniet velit.
                 </p>
               ) : makeupImg ? (
                 <p>
                   Lorem ipsum dolor sit amet {"makeupImg"}
                   <br />
                   consectetur adipisicing elit.
+                  <br />
+                  possimus cumque eum sapiente quibusdam!
+                  <br />
+                  voluptates consectetur eveniet velit.
                 </p>
               ) : (
                 <p>
                   Lorem ipsum dolor sit amet {"default One"}
                   <br />
                   consectetur adipisicing elit.
+                  <br />
+                  possimus cumque eum sapiente quibusdam!
+                  <br />
+                  voluptates consectetur eveniet velit.
                 </p>
               )}
-              <div>
-                <Image
-                  src="/brightness.png"
-                  loading="lazy"
-                  width="200"
-                  height="200"
-                  alt=""
-                />
-              </div>
+
               <div className={styles.__women_btn}>
                 <button>Discover More...</button>
               </div>

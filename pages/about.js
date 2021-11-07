@@ -24,9 +24,7 @@ function About() {
           <div>
             <h1>brightness</h1>
           </div>
-          <div
-            className={styles.__about_child_content}
-          >
+          <div className={styles.__about_child_content}>
             <div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -35,6 +35,7 @@
     font-weight: 600;
     position: relative;
     left: 70px;
+    font-family:"K2D",sans-serif;
   }
   .__hero_btn {
     display: $f;
@@ -42,8 +43,8 @@
     align-items: $c;
     flex-direction: $cl;
     position: absolute;
-    left: -16.7%;
-    bottom: 150px;
+    left: -18.7%;
+    bottom: 125px;
     .image_widthbtn{
       position: relative;
       top: 40px;
@@ -75,7 +76,7 @@
   justify-content: $c;
   align-items: $c;
   flex-direction: $cl;
-  padding: 40px 0 40px 0;
+  padding: 60px 0 58px 0;
   height: 100%;
   margin: 30px 0 30px 0;
   .__women_child {
@@ -92,6 +93,13 @@
     }
     .__women_content {
       position: relative;
+    }
+    .women_logo{
+      position: relative;
+      top: 20px;
+      img{
+        object-fit: contain;
+      }
     }
     .__women_btn {
       color: $rgb;

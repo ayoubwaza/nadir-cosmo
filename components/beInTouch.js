@@ -23,10 +23,13 @@ function Beintouch(props) {
     <div>
       <div className={styles.parent_beintouch}>
         <div className={styles.child__get_g}>
-          <h3>GET IN TOUCH</h3>
+          <h1>GET IN TOUCH</h1>
           <div ref={beintoucref} className={styles.beintouch_anima}></div>
-          <h1>Sign Up To Get Notified For New Products</h1>
-          <h2>No Spam, We Promise</h2>
+          <h2>
+            Sign Up To Get Notified For New Products
+            <br />
+            No Spam, We Promise
+          </h2>
           <div className={styles.child_getintouch}>
             <div>
               <form className={styles.form_getintouch}>
