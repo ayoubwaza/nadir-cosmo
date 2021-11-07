@@ -15,22 +15,17 @@
     padding: $pad;
     color: $wh;
   }
-  h1 {
+  h3 {
     text-transform: uppercase;
     font-size: 100px;
     color: $wh;
     margin: 0;
     font-family: $fv;
-    box-shadow: inset 3.64em 0 0 $fvc;
+    box-shadow: inset 3.34em 0 0 $fvc;
+    font-family: "K2D", sans-serif;
   }
-  img{
-    object-fit: contain;
-  }
-  .__about_child_content{
-    width: $sw;
-    display: $f;
-    justify-content: $c;
-    align-items: $c;
+  .__about_child_content {
     padding: $pad;
+    width: $w;
   }
 }

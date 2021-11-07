@@ -1,7 +1,7 @@
 .__hero_parent {
   width: $w;
   padding: $pad;
-  background: linear-gradient(to right ,$fvc 16%, $fvcl 16%);
+  background: linear-gradient(to right, $fvc 16%, $fvcl 16%);
   background-position: $c;
   background-size: $cv;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     align-items: $c;
     flex-direction: $cl;
     text-align: $c;
-    font-family:$fv, sans-serif;
+    font-family: $fv, sans-serif;
     height: 100%;
     position: relative;
   }
@@ -35,7 +35,7 @@
     font-weight: 600;
     position: relative;
     left: 70px;
-    font-family:"K2D",sans-serif;
+    font-family: "K2D", sans-serif;
   }
   .__hero_btn {
     display: $f;
@@ -45,12 +45,12 @@
     position: absolute;
     left: -18.7%;
     bottom: 125px;
-    .image_widthbtn{
+    .image_widthbtn {
       position: relative;
       top: 40px;
       left: -4px;
     }
-    img{
+    img {
       object-fit: contain;
     }
     button {
@@ -79,12 +79,18 @@
   padding: 60px 0 58px 0;
   height: 100%;
   margin: 30px 0 30px 0;
+  background: url("/background-sec.jpg");
+  background-position: $c;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
   .__women_child {
     width: $sw;
     display: $f;
     justify-content: $sp;
     align-items: $c;
     font-family: $fv;
+    color: $wh;
     p {
       line-height: 2;
     }
@@ -94,11 +100,12 @@
     .__women_content {
       position: relative;
     }
-    .women_logo{
+    .women_logo {
       position: relative;
       top: 20px;
-      img{
+      img {
         object-fit: contain;
+        filter: invert(20%);
       }
     }
     .__women_btn {
@@ -109,14 +116,14 @@
       button {
         background: transparent;
         padding: 7px;
-        color: $rgb;
+        color: $wh;
         font-weight: bold;
         border: 2px solid $rgb;
         transition: 400ms ease-out;
         outline: $n;
         width: 250px;
         &:hover {
-          box-shadow: inset 10.89em 0 0 $rgb, inset -10em 0 0 $rgb;
+          box-shadow: inset 10.89em 0 0 $fvc, inset -10em 0 0 $fvc;
           cursor: pointer;
           color: $wh;
         }
@@ -140,7 +147,7 @@
           top: 120px;
           left: -65px;
           transition: ease-out transform 400ms;
-          &:hover{
+          &:hover {
             transform: scale(1.1);
           }
         }
@@ -149,29 +156,29 @@
           left: -150px;
           top: 60px;
           transition: ease-out transform 400ms;
-          &:hover{
+          &:hover {
             transform: scale(1.1);
-            z-index: 999999*9;
+            z-index: 999999 * 9;
           }
         }
         .img_2 {
           position: absolute;
           left: -15em;
           transition: ease-out transform 400ms;
-          &:hover{
+          &:hover {
             transform: scale(1.1);
-            z-index: 999999*9;
+            z-index: 999999 * 9;
           }
         }
       }
     }
   }
 }
-@media only screen and (min-width:1800px){
+@media only screen and (min-width: 1800px) {
   .__hero_parent {
     width: $w;
     padding: $pad;
-    background: linear-gradient(to right ,$fvc 16%, $fvcl 16%);
+    background: linear-gradient(to right, $fvc 16%, $fvcl 16%);
     background-position: $c;
     background-size: $cv;
     background-repeat: no-repeat;
@@ -188,7 +195,7 @@
       flex-direction: $cl;
       text-align: $c;
       font-family: $fv, sans-serif;
-      height:67vh;
+      height: 67vh;
       position: relative;
     }
     h1 {
@@ -213,12 +220,12 @@
       position: absolute;
       left: -38%;
       bottom: 180px;
-      .image_widthbtn{
+      .image_widthbtn {
         position: relative;
         top: 40px;
         left: -4px;
       }
-      img{
+      img {
         object-fit: contain;
       }
       button {
