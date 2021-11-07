@@ -111,7 +111,7 @@ const Reviews = ({ size, onStartPerformance, onEndPerformance }) => {
 
   return (
     <FullWidth>
-      <Height height={350}>
+      <Height height={450}>
         <Marquee
           key={key}
           scatterRandomly

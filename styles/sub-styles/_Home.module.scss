@@ -17,7 +17,7 @@
     align-items: $c;
     flex-direction: $cl;
     text-align: $c;
-    font-family: "Cera Pro", sans-serif;
+    font-family:$fv, sans-serif;
     height: 100%;
     position: relative;
   }
@@ -34,7 +34,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     position: relative;
-    left: 67px;
+    left: 70px;
   }
   .__hero_btn {
     display: $f;
@@ -42,7 +42,7 @@
     align-items: $c;
     flex-direction: $cl;
     position: absolute;
-    left: -18%;
+    left: -16.7%;
     bottom: 150px;
     .image_widthbtn{
       position: relative;
@@ -83,7 +83,7 @@
     display: $f;
     justify-content: $sp;
     align-items: $c;
-    font-family: "Cera Pro";
+    font-family: $fv;
     p {
       line-height: 2;
     }
@@ -179,7 +179,7 @@
       align-items: $c;
       flex-direction: $cl;
       text-align: $c;
-      font-family: "Cera Pro", sans-serif;
+      font-family: $fv, sans-serif;
       height:67vh;
       position: relative;
     }

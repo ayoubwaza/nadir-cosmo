@@ -1,0 +1,45 @@
+.__products {
+  width: $w;
+  height: 70vh;
+  font-family: $fv, sans-serif;
+  background: url("/a.jpg");
+  background-position: $c;
+  background-size: $cv;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  background-attachment: fixed;
+  padding: $pad;
+  .__products_child {
+    width: 80%;
+    color: $wh;
+    .__products_child_content {
+      .__products_logoimg {
+        position: relative;
+        left: -10px;
+      }
+      img {
+        object-fit: contain;
+      }
+      p {
+        font-weight: $b;
+        line-height: 2;
+      }
+      button {
+        background: transparent;
+        padding: 7px;
+        color: $rgb;
+        font-weight: bold;
+        border: 2px solid $rgb;
+        transition: 400ms ease-out;
+        outline: $n;
+        width: 250px;
+        &:hover {
+          box-shadow: inset 10.89em 0 0 $rgb, inset -10em 0 0 $rgb;
+          cursor: pointer;
+          color: $wh;
+        }
+      }
+    }
+  }
+}

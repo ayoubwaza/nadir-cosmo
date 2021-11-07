@@ -6,9 +6,12 @@ import Link from "next/link";
 import navMobile from "../public/Animations/controleNavbar.json";
 import Lottie from "lottie-web";
 import { FaCartPlus, FaHeart, FaSearch } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { activatesearchbar } from "./redux/searchbar/actionsearch";
 function NavBar() {
   const anima_navbar = useRef(null);
   const [controleLottieMenu, setControleLottieMenu] = useState(false);
+  const dispatchSearch = useDispatch();
   useEffect(() => {
     Lottie.loadAnimation({
       container: anima_navbar.current,
@@ -46,11 +49,15 @@ function NavBar() {
     <div className={styles.__nav_parent}>
       <div className={styles.cart_with_logo}>
         <div className={styles.nav__logo}>
-          <Image src="/brightness - 3.png" width="200" height="80" alt="" />
+          <Image src="/brightness-3.png" width="200" height="80" alt="" />
         </div>
         <div className={styles.map_heart}>
-        <div>
-            <span >
+          <div
+            onClick={() => {
+              dispatchSearch(activatesearchbar());
+            }}
+          >
+            <span id="srch">
               <FaSearch />
             </span>
           </div>
@@ -81,10 +88,8 @@ function NavBar() {
                 <a className="links_arr">Our Products</a>
               </Link>
             </li>
-            <li
-              className={router.pathname === "/advices" ? styles.linka : null}
-            >
-              <Link href="/advices">
+            <li className={router.pathname === "/about" ? styles.linka : null}>
+              <Link href="/about">
                 <a className="links_arr">About</a>
               </Link>
             </li>

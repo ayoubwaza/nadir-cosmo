@@ -6,10 +6,9 @@
   align-items: $c;
   flex-direction: $cl;
   font-family: $fv;
-  background-position: $c;
-  background-size: $cv;
   padding: $pad;
-  color: $rgb;
+  color: $wh;
+  background: $rgb;
   .beintouch_anima {
     width: 200px;
     height: 200px;
@@ -17,7 +16,7 @@
   }
   h1,
   h2 {
-    color: $rgb;
+    color: $wh;
   }
   h2 {
     margin-top: 0;

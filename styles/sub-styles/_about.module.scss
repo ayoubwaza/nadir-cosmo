@@ -1,0 +1,36 @@
+.__about {
+  width: $w;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  height: 100%;
+  .__about_child {
+    width: $sw;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    background: $rgb;
+    padding: $pad;
+    color: $wh;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 100px;
+    color: $wh;
+    margin: 0;
+    font-family: $fv;
+    box-shadow: inset 3.64em 0 0 $fvc;
+  }
+  img{
+    object-fit: contain;
+  }
+  .__about_child_content{
+    width: $sw;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    padding: $pad;
+  }
+}

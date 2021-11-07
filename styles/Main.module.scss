@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 $c: center;
 $cl: column;
 $n: none;
@@ -11,11 +12,11 @@ $f: flex;
 $b: bold;
 $wh: white;
 $sp: space-around;
-$fv: "Cera Pro";
-$fvc: #FFA500;
-$standar:#F6E6F4;
+$fv: "Montserrat";
+$fvc: #ffa500;
+$standar: #f6e6f4;
 $sv: space-evenly;
-$fvcl:#00aeef;
+$fvcl: #00aeef;
 @mixin FlexThem {
   display: $f;
   justify-content: $c;
@@ -34,3 +35,5 @@ $fvcl:#00aeef;
 @import "./sub-styles/getintouch.module";
 @import "./sub-styles/sliders.module";
 @import "./sub-styles/footer.module";
+@import "./sub-styles/products.module";
+@import "./sub-styles/about.module";

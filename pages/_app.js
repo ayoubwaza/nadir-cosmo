@@ -4,10 +4,14 @@ import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/effect-fade/effect-fade.min.css";
 import "swiper/components/navigation/navigation.min.css";
+
 import React, { useEffect, useRef } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { animateScroll, Link } from "react-scroll";
+import { animateScroll } from "react-scroll";
+import { Provider } from "react-redux";
+import store from "../components/redux/store";
 function MyApp({ Component, pageProps }) {
+  console.log(store);
   const ref_cursur = useRef(null);
   const ref_sidetotop = useRef(null);
   //links while hovering on'em
@@ -49,7 +53,7 @@ function MyApp({ Component, pageProps }) {
     const aside_top = document.getElementsByClassName("aside_top")[0];
 
     document.addEventListener("scroll", () => {
-      if (window.scrollY >500) {
+      if (window.scrollY > 500) {
         aside_top.style.display = "flex";
       } else {
         aside_top.style.display = "none";
@@ -87,8 +91,9 @@ function MyApp({ Component, pageProps }) {
           <FaArrowUp />
         </span>
       </div>
-
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </div>
   );
 }
