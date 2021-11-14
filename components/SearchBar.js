@@ -3,7 +3,7 @@ import styles from "../styles/Main.module.scss";
 import { FaPowerOff, FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { inactivetesearchbar } from "./redux/searchbar/actionsearch";
+import { inactivetesearchbar } from "./redux/actionCreators/actions";
 function SearchBar() {
   const search_ref = useRef(null);
   useEffect(() => {
@@ -57,7 +57,7 @@ function SearchBar() {
                 type="text"
                 name="searchbar"
                 id="searchbar"
-                placeholder="Type To Search"
+                placeholder="Search Our Products"
               />
               <div className={styles.btn_serach_handler}>
                 <button>

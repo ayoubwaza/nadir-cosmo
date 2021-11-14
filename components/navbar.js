@@ -6,12 +6,13 @@ import Link from "next/link";
 import navMobile from "../public/Animations/controleNavbar.json";
 import Lottie from "lottie-web";
 import { FaCartPlus, FaHeart, FaSearch } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { activatesearchbar } from "./redux/searchbar/actionsearch";
+import { useDispatch, useSelector } from "react-redux";
+import { activatesearchbar } from "./redux/actionCreators/actions";
 function NavBar() {
   const anima_navbar = useRef(null);
   const [controleLottieMenu, setControleLottieMenu] = useState(false);
   const dispatchSearch = useDispatch();
+  const cartItems = useSelector((state) => state.cartReducer.products);
   useEffect(() => {
     Lottie.loadAnimation({
       container: anima_navbar.current,
@@ -61,10 +62,15 @@ function NavBar() {
               <FaSearch />
             </span>
           </div>
-          <div>
-            <span className={styles.cart}>
-              <FaCartPlus />
-            </span>
+          <div className={styles.cartitems_compo}>
+            <Link href="/cartitems">
+              <a>
+                <span className={styles.cart}>
+                  <FaCartPlus />
+                  <i>{cartItems.length}</i>
+                </span>
+              </a>
+            </Link>
           </div>
           <div>
             <span>

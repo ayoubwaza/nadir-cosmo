@@ -1,0 +1,100 @@
+.loginIn_parent {
+  @include Column();
+  width: $w;
+  height: 100vh;
+  background: url("/login.webp");
+  background-position: $c;
+  background-repeat: no-repeat;
+  background-size: $cv;
+  h1 {
+    color: $wh;
+    font-weight: $b;
+    box-shadow: inset -13em 0 0 $fvc;
+    padding: 0px 5px 0px 5px;
+    font-family: "K2D", sans-serif;
+  }
+  .loginIn_child {
+    width: 80%;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    .login_content_jForm {
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.75) 45%,
+        $pink 45%
+      );
+      backdrop-filter: blur(40px);
+      box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      padding: 20px;
+      img {
+        object-fit: $cv;
+      }
+      form {
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        flex-direction: $cl;
+        font-family: $fv !important;
+        position: relative;
+        .finger_Print {
+          position: relative;
+          img {
+            object-fit: $cv;
+          }
+        }
+        img {
+          object-fit: contain;
+        }
+        .form_inpu_handler_login {
+          position: relative;
+          input {
+            width: 280px;
+            padding: 7px;
+            border: $n;
+            border-bottom: 2px solid $fvc;
+            outline: $n;
+            padding-left: 40px;
+            font-family: $fv !important;
+            color: $rgb;
+            &::placeholder {
+              color: $rgb;
+              font-weight: $b;
+            }
+          }
+          span {
+            position: absolute;
+            left: 0%;
+            margin-left: 10px;
+            top: 7px;
+            cursor: pointer;
+          }
+        }
+        div {
+          margin-bottom: 20px;
+        }
+        button {
+          width: 250px;
+          padding: 7px;
+          background: transparent;
+          box-shadow: 0 5px 5px 0 $rgb;
+          border: $n;
+          outline: $n;
+          background: $fvc;
+          font-weight: bold;
+          font-family: "K2D", sans-serif;
+          transition: 400ms ease-out;
+          &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

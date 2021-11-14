@@ -17,6 +17,7 @@ $fvc: #ffa500;
 $standar: #f6e6f4;
 $sv: space-evenly;
 $fvcl: #0131c1;
+$pink: #ff31c2;
 @mixin FlexThem {
   display: $f;
   justify-content: $c;
@@ -37,3 +38,6 @@ $fvcl: #0131c1;
 @import "./sub-styles/footer.module";
 @import "./sub-styles/products.module";
 @import "./sub-styles/about.module";
+@import "./sub-styles/contact.module";
+@import "./sub-styles/login.module";
+@import "./sub-styles/cartitems.module";

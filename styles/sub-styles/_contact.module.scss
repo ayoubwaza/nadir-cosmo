@@ -1,0 +1,30 @@
+.__contact_parent {
+  width: $w;
+  height: 100%;
+  background: $rgb;
+  background-position: $c;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  h1 {
+    font-family: "K2D", sans-serif;
+    font-size: 100px;
+    letter-spacing: -2px;
+    color: $wh;
+    margin-bottom: 2%;
+  }
+  padding: $pad;
+  .__contact_child {
+    background: #ffffff;
+    box-shadow: inset 5px -5px 10px #ffffff, inset -5px 5px 10px #c9b8b8;
+    height: 100%;
+    width: $sw;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    .handle_anima_contact {
+      width: 400px;
+    }
+  }
+}

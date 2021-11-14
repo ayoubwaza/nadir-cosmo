@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "productImg": "/watch.jpg",
+    "productName": "Argane",
+    "productPrice": 200
+  },
+  {
+    "id": 2,
+    "productImg": "/watch.jpg",
+    "productName": "Zeit",
+    "productPrice": 300
+  },
+  {
+    "id": 3,
+    "productImg": "/watch.jpg",
+    "productName": "zubida",
+    "productPrice": 240
+  },
+  {
+    "id": 4,
+    "productImg": "/watch.jpg",
+    "productName": "somethingelse",
+    "productPrice": 150
+  },
+  {
+    "id": 5,
+    "productImg": "/watch.jpg",
+    "productName": "Argane",
+    "productPrice": 140
+  },
+  {
+    "id": 6,
+    "productImg": "/watch.jpg",
+    "productName": "Zeit",
+    "productPrice": 30
+  },
+  {
+    "id": 7,
+    "productImg": "/watch.jpg",
+    "productName": "zubida",
+    "productPrice": 70
+  },
+  {
+    "id": 8,
+    "productImg": "/watch.jpg",
+    "productName": "somethingelse",
+    "productPrice": 100
+  }
+]

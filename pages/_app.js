@@ -51,7 +51,6 @@ function MyApp({ Component, pageProps }) {
   //aside button to top
   const asideButtonToTop = () => {
     const aside_top = document.getElementsByClassName("aside_top")[0];
-
     document.addEventListener("scroll", () => {
       if (window.scrollY > 500) {
         aside_top.style.display = "flex";
@@ -66,10 +65,25 @@ function MyApp({ Component, pageProps }) {
       ref_cursur.current.style.transform = "scale(1)";
     });
   };
+  //be _different
+  const beDif = () => {
+    const be_different = document.getElementById("para_absolu");
+    if (be_different) {
+      be_different.addEventListener("mouseenter", () => {
+        ref_cursur.current.style.transform = "scale(4)";
+      });
+      be_different.addEventListener("mouseleave", () => {
+        ref_cursur.current.style.transform = "scale(1)";
+      });
+    } else {
+      return null;
+    }
+  };
   useEffect(() => {
     asideButtonToTop();
     TrashHomeWord();
     LinksMouseEffect();
+    beDif();
   });
   return (
     <div>

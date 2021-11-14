@@ -15,7 +15,7 @@ import Women from "../components/women";
 import { useSelector } from "react-redux";
 import SearchBar from "../components/SearchBar";
 export default function Home() {
-  const selectorSearch = useSelector((state) => state.isBarActive);
+  const selectorSearch = useSelector((state) => state.searchBarReducer.isBarActive);
   const variants = {
     anim: {
       transition: {
@@ -32,7 +32,9 @@ export default function Home() {
       opacity: 1,
       y: 0,
       transition: {
-        ease: [0.6, 0.01, -0.05, 0.65],
+        type: "spring",
+        stiffness: 10,
+        bounce: 100,
         duration: 1.6,
       },
     },
@@ -78,7 +80,9 @@ export default function Home() {
               }}
             />
           </motion.h1>
-          <br />
+          <div className={styles.para_absolu}>
+            <p id="para_absolu">Be U , Be _Different</p>
+          </div>
           <motion.div className={styles.__hero_btn} variants={TitleItems}>
             <div className={styles.image_widthbtn}>
               <Image

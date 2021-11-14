@@ -3,6 +3,17 @@
   width: $w;
   @include Column();
   font-family: $fv, sans-serif;
+  .cartitems_compo{
+    span{
+      position: relative;
+      i{
+        position: absolute;
+        top: 6px;
+        left:86%;
+        font-weight: $b;
+      }
+    }
+  }
   .cart_with_logo {
     width: 92%;
     display: $f;

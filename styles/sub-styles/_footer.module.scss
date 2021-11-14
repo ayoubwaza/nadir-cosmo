@@ -12,6 +12,9 @@
       justify-content: $sv;
       align-items: $c;
       width: 40%;
+      padding: 7px 0 0 0;
+      border-radius: 50px;
+      box-shadow: 20px 20px 60px #272525, -20px -20px 60px #484444;
       img {
         object-fit: $cv;
         border-radius: 100%;
