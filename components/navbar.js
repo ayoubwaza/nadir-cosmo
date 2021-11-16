@@ -67,7 +67,7 @@ function NavBar() {
               <a>
                 <span className={styles.cart}>
                   <FaCartPlus />
-                  <i>{cartItems.length}</i>
+                  <i>{cartItems.length <= 0 ? null : cartItems.length}</i>
                 </span>
               </a>
             </Link>

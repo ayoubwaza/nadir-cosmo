@@ -2,8 +2,10 @@
   width: $w;
   @include Column();
   height: $w;
+  font-family: $fv !important;
   .cartitems_child {
     width: $sw;
     height: $w;
+    @include Column();
   }
 }

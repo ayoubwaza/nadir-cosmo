@@ -26,6 +26,13 @@ function CartItems() {
                 ? "We are so Happy To have you here"
                 : null}
             </h1>
+            {cartItemsCheckout.map((prod,i) => {return(
+              <div key={i}>
+                <div>
+                  {prod.productPrice}
+                </div>
+              </div>
+            )})}
           </div>
         </div>
       </div>
