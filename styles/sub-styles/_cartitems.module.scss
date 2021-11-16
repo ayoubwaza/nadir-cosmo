@@ -2,10 +2,20 @@
   width: $w;
   @include Column();
   height: $w;
-  font-family: $fv !important;
+  h1 {
+    font-family: "K2D", sans-serif;
+  }
   .cartitems_child {
     width: $sw;
     height: $w;
     @include Column();
+  }
+  .__checkoutCart_prod{
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    img{
+      object-fit: $cv;
+    }
   }
 }

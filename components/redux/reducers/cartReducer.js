@@ -5,17 +5,26 @@ const initialCartState = {
 const cartReducer = (state = initialCartState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      /* const existItem = state.cartItems.find((x) => x.product === item.product) */
-      return {
-        ...state,
-        products: [...state.products, action.payload],
-      };
+      
+      const isExist = state.products.find((x) => {
+        return x.id === action.payload.id;
+      });
+      if (isExist) {
+        return state ;
+      } else {
+        return {
+          ...state,
+          products: [...state.products, action.payload],
+        };
+      }
+
     case REMOVE_FROM_CART:
       return {
+        ...state,
         products: state.products.filter((x) => x.id !== action.payload),
       };
     default:
-     return state;
+      return state;
   }
 };
 export default cartReducer;

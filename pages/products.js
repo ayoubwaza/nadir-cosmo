@@ -3,16 +3,18 @@ import NavBar from "../components/navbar";
 import styles from "../styles/Main.module.scss";
 import Image from "next/image";
 import SearchBar from "../components/SearchBar";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import ProductsData from "../components/product.json";
 import { FaCartPlus } from "react-icons/fa";
 import { addtocart } from "../components/redux/actionCreators/actions";
-import Footer from '../components/footer'
+import Footer from "../components/footer";
 function Products() {
-  const selectorSearch = useSelector((state) => state.searchBarReducer.isBarActive);
+  const selectorSearch = useSelector(
+    (state) => state.searchBarReducer.isBarActive
+  );
   const dispatchCart = useDispatch();
-  const cartState = useSelector( state => state.cartReducer);
-  console.log(cartState,selectorSearch)
+  const cartState = useSelector((state) => state.cartReducer);
+  console.log(cartState, selectorSearch);
   return (
     <div>
       {selectorSearch ? <SearchBar /> : null}
@@ -56,7 +58,18 @@ function Products() {
                 <h1>{prod.productName}</h1>
                 <h2>{prod.productPrice + "Dh"}</h2>
                 <div className={styles.__product_cart_btn}>
-                  <button onClick={() => dispatchCart(addtocart(prod.productImg,prod.productName,prod.productPrice))}>
+                  <button
+                    onClick={() =>
+                      dispatchCart(
+                        addtocart(
+                          prod.id,
+                          prod.productImg,
+                          prod.productName,
+                          prod.productPrice
+                        )
+                      )
+                    }
+                  >
                     <span>
                       <FaCartPlus />
                     </span>
@@ -68,7 +81,7 @@ function Products() {
           })}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
