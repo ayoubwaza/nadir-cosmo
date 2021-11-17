@@ -10,12 +10,26 @@
     height: $w;
     @include Column();
   }
-  .__checkoutCart_prod{
+  .handle_cartinCheckout {
+    @include Column();
+    width: 80%;
+  }
+  .__checkoutCart_prod {
     display: $f;
-    justify-content: $sp;
+    justify-content: space-between;
     align-items: $c;
-    img{
+    p {
+      margin: 0%;
+      font-weight: $b;
+
+    }
+    img {
       object-fit: $cv;
+    }
+    .content_prod_checkoutè_cart {
+      width: 400px;
+      margin-left: 70px;
+      display: $f;
     }
   }
 }

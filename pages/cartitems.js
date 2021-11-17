@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Main.module.scss";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import { useSelector, useDispatch } from "react-redux";
 import { removefromcart } from "../components/redux/actionCreators/actions";
 import Image from "next/image";
+import { IoTrashOutline } from "react-icons/io5";
 function CartItems() {
   const cartItemsCheckout = useSelector((state) => state.cartReducer.products);
   const dispatch = useDispatch();
-  const filtredNumber = cartItemsCheckout.filter((x) => {
-    //filtering the data and using only numbners
-  });
-  console.log(filtredNumber);
-  //getPrices()
+  let getPrices = [];
+  const filtredNumber = () => {
+    cartItemsCheckout.filter((x) => {
+      getPrices.push(x.productPrice);
+    });
+    console.log(getPrices);
+  };
+  filtredNumber();
   return (
     <div>
       <style jsx global>
@@ -34,35 +38,46 @@ function CartItems() {
                 ? "We are so Happy To have you here"
                 : null}
             </h1>
-            {cartItemsCheckout.map((prod, i) => {
-              return (
-                <div className={styles.__checkoutCart_prod} key={i}>
-                  <div>
-                    <Image
-                      src={prod.productImg}
-                      alt=""
-                      width="200"
-                      height="200"
-                    />
-                  </div>
-                  <div>
+            <div className={styles.handle_cartinCheckout}>
+              {cartItemsCheckout.map((prod, i) => {
+                return (
+                  <div className={styles.__checkoutCart_prod} key={i}>
                     <div>
-                      <p>{prod.productName}</p>
+                      <Image
+                        src={prod.productImg}
+                        alt=""
+                        width="100"
+                        height="100"
+                      />
                     </div>
-                    <div>
-                      <button
-                        onClick={() => {
-                          dispatch(removefromcart(prod.id));
-                        }}
-                      >
-                        Remove From Cart
-                      </button>
-                    </div>
-                    <div>{prod.productPrice}</div>
+                    <div className={styles.content_prod_checkoutè_cart}>
+                      <div>
+                        <p>{prod.productName}</p>
+                      </div>
+                      <div>
+                        <span
+                          onClick={() => {
+                            dispatch(removefromcart(prod.id));
+                          }}
+                        >
+                          <IoTrashOutline />
+                        </span>
+                      </div>
+                      <div>{prod.productPrice}</div>
+                    </div> 
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            <hr />
+            <div>
+              <p>
+                {getPrices.reduce((accu, abb) => {
+                  return accu + abb;
+                }, 0)}{" "}
+                Dh
+              </p>
+            </div>
           </div>
           {/* <div>{allPrice}</div> */}
         </div>
